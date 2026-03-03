@@ -45,15 +45,26 @@
             <asp:TextBox ID="txtFechaNacimiento" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
         </div>
 
-        <asp:RequiredFieldValidator ID="rvfCorreo" runat="server" ErrorMessage="Es necesario poner un correo" ControlToValidate="txtFechaNacimiento" Display="Dynamic"></asp:RequiredFieldValidator>
-
         <div class="form-group">
-            <asp:Label ID="Label4" runat="server" Text="Correo" CssClass="control-label"></asp:Label>
-            <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label ID="lblCorreo" runat="server" Text="Correo" CssClass="control-label"></asp:Label>
+            <asp:TextBox ID="txtCorreo" runat="server" placeholder="jkgarciag@edu.uc.ac.cr" CssClass="form-control"></asp:TextBox>
         </div>
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary my-2" OnClick="btnGuardar_Click" />
-
+        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server"
+            ErrorMessage="Es necesario indicar el correo"
+            ControlToValidate="txtCorreo" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:Button ID="Button1" runat="server" Text="Guardar" CssClass="btn btn-primary my-2" OnClick="btnGuardar_Click" />
         <asp:Label ID="lblResultado" runat="server" Text="" CssClass="control-label"></asp:Label>
-    
-        <asp:GridView ID="gvPersonas" runat="server"></asp:GridView>
+        <asp:GridView ID="gvPersonas" runat="server" AutoGenerateColumns="False" DataKeyNames="IDPersona" DataSourceID="SqlDataSource1" OnRowDeleting="gvPersonas_RowDeleting">
+            <Columns>
+                <asp:BoundField DataField="IDPersona" HeaderText="IDPersona" InsertVisible="False" ReadOnly="True" SortExpression="IDPersona" />
+                <asp:BoundField DataField="TipoDocumento" HeaderText="TipoDocumento" SortExpression="TipoDocumento" />
+                <asp:BoundField DataField="Documento" HeaderText="Documento" SortExpression="Documento" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" SortExpression="Apellidos" />
+                <asp:BoundField DataField="FechaNac" HeaderText="FechaNac" SortExpression="FechaNac" />
+                <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+                <asp:CommandField ShowDeleteButton="True" />
+            </Columns>
+        </asp:GridView>
+
     </asp:Content>
