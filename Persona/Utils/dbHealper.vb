@@ -1,23 +1,25 @@
-﻿Imports System.Data.SqlClient
+﻿
+Imports System.Data.SqlClient
 
-Public Class dbHealper
+Public Class DbHealper
+    Private connectionString As String = ConfigurationManager.ConnectionStrings("II-46ConnectionString").ConnectionString
 
-    Private connectionString As String = ConfigurationManager.ConnectionStrings("Cambiar-NOMBRE").ConnectionString
+
 
     Public Function GetConnection() As SqlConnection
         Dim conn As New SqlConnection(connectionString)
         Try
             conn.Open()
         Catch ex As Exception
-            conn.Dispose() ' Limpia la conexión
+            conn.Dispose() 'limpia la conexion
             Throw New Exception("Error al abrir la conexión: " & ex.Message)
         End Try
         Return conn
     End Function
 
-
     ' Método para ejecutar un comando SQL (INSERT, UPDATE, DELETE)
-    Public Function ExecuteNonQuery(query As String, parameters As Dictionary(Of String, Object)) As Boolean
+    Public Function ExecuteNonQuery(query As String, parameters As Dictionary(Of String, Object), ByRef errorMessage As String) As Boolean
+
         If String.IsNullOrWhiteSpace(query) Then
             Throw New ArgumentException("La consulta no puede estar vacía")
         End If
@@ -28,15 +30,16 @@ Public Class dbHealper
                         cmd.Parameters.AddWithValue(p.Key, p.Value)
                     Next
                 End If
+
                 Try
                     cmd.ExecuteNonQuery()
+
                     Return True
                 Catch ex As Exception
-                    ' Aquí podrías registrar el error si lo necesitas
+                    errorMessage = "Error al ejecutar la consulta: " & ex.Message
                     Return False
                 End Try
             End Using
         End Using
     End Function
-
 End Class

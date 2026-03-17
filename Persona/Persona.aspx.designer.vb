@@ -14,31 +14,22 @@ Option Explicit On
 Partial Public Class Persona1
 
     '''<summary>
-    '''Control btnGuardar.
+    '''Control lblTipoDoc.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblTipoDoc As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control Label5.
+    '''Control ddlTipoDocumento.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control DdlTipoDocumento.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DdlTipoDocumento As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlTipoDocumento As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control rfvTipoDocumento.
@@ -50,13 +41,13 @@ Partial Public Class Persona1
     Protected WithEvents rfvTipoDocumento As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''Control Label6.
+    '''Control lblNumDoc.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblNumDoc As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Control txtDocumento.
@@ -68,85 +59,94 @@ Partial Public Class Persona1
     Protected WithEvents txtDocumento As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control rvfNombre.
+    '''Control rfvDocumento.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rvfNombre As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvDocumento As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''Control Label1.
+    '''Control lblNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblNombre As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control TxtNombre.
+    '''Control txtNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtNombre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control rvfApellidos.
+    '''Control rfvNombre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rvfApellidos As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvNombre As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''Control Label2.
+    '''Control lblApellidos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblApellidos As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control TxtApellidos.
+    '''Control txtApellidos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtApellidos As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtApellidos As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control rvfFechNac.
+    '''Control rfvApellidos.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rvfFechNac As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvApellidos As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''Control Label3.
+    '''Control lblFechaNac.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblFechaNac As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtFechaNacimiento.
+    '''Control txtFechaNac.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtFechaNacimiento As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtFechaNac As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control rfvFechaNac.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents rfvFechaNac As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''Control lblCorreo.
@@ -176,13 +176,13 @@ Partial Public Class Persona1
     Protected WithEvents rfvCorreo As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''Control Button1.
+    '''Control btnGuardar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnGuardar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control lblResultado.
@@ -201,4 +201,13 @@ Partial Public Class Persona1
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents gvPersonas As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Control SqlDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
